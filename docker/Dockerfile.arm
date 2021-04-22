@@ -1,0 +1,11 @@
+FROM arm32v6/alpine:3.13
+
+LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
+  org.opencontainers.image.title="Drone Base" \
+  org.opencontainers.image.vendor="Webhippie"
+
+ENV GODEBUG=netdns=go
+
+RUN apk add --no-cache ca-certificates mailcap && \
+	echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+    [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' >| /etc/nsswitch.conf
