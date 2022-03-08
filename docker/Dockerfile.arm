@@ -1,4 +1,4 @@
-FROM arm32v6/alpine:3.13@sha256:34619c4ab35bb603f3eaedda965815354d8f387b57da3e4ac344059ae17287de
+FROM arm32v6/alpine:3.15@sha256:e047bc2af17934d38c5a7fa9f46d443f1de3a7675546402592ef805cfa929f9d
 
 LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
   org.opencontainers.image.title="Drone Base" \
